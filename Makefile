@@ -44,7 +44,7 @@ release:
 	make version
 	make build
 	twine upload dist/${PACKAGENAME}-`python ${PACKAGENAME}/__version__.py`*
-	git add pyproject.toml ${PACKAGENAME}/__version__.py CHANGELOG.md
+	git add pyproject.toml ${PACKAGENAME}/__version__.py
 	git commit -m "Bumped version" --allow-empty
 	git tag -a `python ${PACKAGENAME}/__version__.py` -m `python ${PACKAGENAME}/__version__.py`
 	git push
